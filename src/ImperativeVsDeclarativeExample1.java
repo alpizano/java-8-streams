@@ -1,3 +1,5 @@
+import java.util.stream.IntStream;
+
 public class ImperativeVsDeclarativeExample1 {
     public static void main(String[] args) {
         /**
@@ -10,6 +12,12 @@ public class ImperativeVsDeclarativeExample1 {
         }
 
         System.out.println("Sum using Imperative Approach: " + sum);
+
+        //rangeClosed includes 100
+        int sum1 = IntStream.rangeClosed(0,100).sum();
+        System.out.println("Sum using Declarative Approach: " + sum1);
+
+
     }
 
 }
