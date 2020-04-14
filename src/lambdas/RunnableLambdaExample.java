@@ -25,12 +25,22 @@ public class RunnableLambdaExample {
             System.out.println("Inside Runnable 2");
         };
 
+        // Curly braces not needed for single statements
         Runnable runnableLambda1 = () -> System.out.println("Inside Runnable 3");
 
         new Thread(runnableLambda).start();
 
         new Thread(runnableLambda1).start();
 
+        // Passing Lambda inside new Thread
         new Thread( () -> System.out.println("Lambda inside new Thread")).start();
+
+        // Runnable with multiple statements in method body
+        Runnable runnableLambdaMultiple = () -> {
+            System.out.println("Inside Runnable 44");
+            System.out.println("Inside Runnable 55");
+        };
+
+        new Thread(runnableLambdaMultiple).start();
     }
 }
